@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:06:00 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/02 12:06:00 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/04 14:39:36 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[i + dst_len] = '\0';
 	return (output);
 }
-
-/*
-int	main(int ac, char **av)
-{
-	(void) ac;
-	char dest[256] = "hello";
-	printf("\n-----------------------------\nOutput: %ld - Dest : %s\n-----------------------------\n", ft_strlcat(dest, av[1], atoi(av[2])), dest);
-}*/

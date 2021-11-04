@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 16:08:58 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/04 13:41:05 by olabrahm         ###   ########.fr       */
+/*   Created: 2021/11/04 14:30:04 by olabrahm          #+#    #+#             */
+/*   Updated: 2021/11/04 17:11:20 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
+	unsigned char	*casted_dst;
+	unsigned char	*casted_src;
 
-	i = 0;
-	while (i < n)
+	casted_dst = (unsigned char *)dst;
+	casted_src = (unsigned char *)src;
+	if (dst > src && dst < src + len)
 	{
-		*((unsigned char *)s + i) = (unsigned char) c;
-		i++;
+		while (len--)
+			*(casted_dst + len) = *(casted_src + len);
 	}
-	return (s);
+	else
+		ft_memcpy(dst, src, len);
+	return (dst);
 }

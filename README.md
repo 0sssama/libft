@@ -1,28 +1,31 @@
 # Functions included in Libft
 
+* Part 1
 [x] ft_isalpha
 [x] ft_isdigit
 [x] ft_isalnum
-[ ] ft_isascii
+[x] ft_isascii
 [x] ft_isprint
 [x] ft_strlen
 [x] ft_memset
 [x] ft_bzero
-[ ] ft_memcpy
-[ ] ft_memmove
+[x] ft_memcpy
+[x] ft_memmove
 [x] ft_strlcpy
 [x] ft_strlcat
-[ ] ft_toupper
-[ ] ft_tolower
+[x] ft_toupper
+[x] ft_tolower
 [x] ft_strchr
-[ ] ft_strrchr
-[ ] ft_strncmp
+[x] ft_strrchr
+[x] ft_strncmp
 [ ] ft_memchr
 [ ] ft_memcmp
 [ ] ft_strnstr
 [ ] ft_atoi
 [ ] ft_calloc
 [x] ft_strdup
+
+* Part 2
 [ ] ft_substr
 [ ] ft_strjoin
 [ ] ft_strtrim

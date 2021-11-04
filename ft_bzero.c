@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 00:04:04 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/02 00:04:04 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/04 15:32:44 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_bzero(void *s, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n && ((char *) s)[i])
+	while (i < n && ((unsigned char *) s)[i])
 	{
-		((char *) s)[i] = '\0';
+		((unsigned char *) s)[i] = '\0';
 		i++;
 	}
 }

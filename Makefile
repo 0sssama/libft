@@ -10,7 +10,7 @@ AR= ar rcs
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	${AR} ${NAME} ${OBJCTS}
+	$(AR) $(NAME) $(OBJS)
 
 %.o: %.c 
 	$(CC) $(FLAGS) -c $? -o $@
