@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:40:02 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/06 20:45:36 by olabrahm         ###   ########.fr       */
+/*   Created: 2021/11/06 21:41:31 by olabrahm          #+#    #+#             */
+/*   Updated: 2021/11/06 21:53:05 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "_bonus.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	char	to_find;
-	int		i;
+	t_list	*current_node;
 
-	i = 0;
-	to_find = (char) c;
-	while (s[i])
+
+	current_node = ft_lstlast(*lst);
+	while (current_node)
 	{
-		if (s[i] == to_find)
-			return ((char *)(s + i));
-		i++;
+		(*del)((void *)current_node);
+		current_node = ft_lstlast(*lst);
 	}
-	if (s[i] == to_find)
-		return ((char *)(s + i));
-	return (0);
 }

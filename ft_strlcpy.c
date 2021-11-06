@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 11:24:38 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/04 15:31:49 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/06 20:58:52 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = src[i];
 		i++;
 	}
-	if (i < dst_len)
-		dst[i] = '\0';
+	dst[i] = '\0';
 	return (ft_strlen(src));
 }

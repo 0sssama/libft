@@ -18,7 +18,7 @@
 [x] ft_strchr
 [x] ft_strrchr
 [x] ft_strncmp
-[x] ft_memchr <== 1 test wrong
+[x] ft_memchr
 [x] ft_memcmp
 [x] ft_strnstr
 [x] ft_atoi
@@ -35,17 +35,17 @@
 [x] ft_striteri
 [x] ft_putchar_fd
 [x] ft_putstr_fd
-[ ] ft_putendl_fd
-[ ] ft_putnbr_fd
+[x] ft_putendl_fd
+[x] ft_putnbr_fd
 
 # Bonus functions
 
-[ ] ft_lstnew
-[ ] ft_lstadd_front
-[ ] ft_lstsize
-[ ] ft_lstlast
-[ ] ft_lstadd_back
-[ ] ft_lstdelone
+[x] ft_lstnew
+[x] ft_lstadd_front
+[x] ft_lstsize
+[x] ft_lstlast
+[x] ft_lstadd_back
+[x] ft_lstdelone
 [ ] ft_lstclear
 [ ] ft_lstiter
 [ ] ft_lstmap

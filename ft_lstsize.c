@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 12:02:46 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/06 20:43:05 by olabrahm         ###   ########.fr       */
+/*   Created: 2021/11/06 15:34:38 by olabrahm          #+#    #+#             */
+/*   Updated: 2021/11/06 21:39:13 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "_bonus.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	ft_lstsize(t_list *lst)
 {
-	char	*sub;
-	size_t	i;
+	int		i;
+	t_list	*current_node;
 
-	if (!s)
-		return (0);
-	if (start >= ft_strlen(s))
-		return ((char *) ft_calloc(ft_strlen(s), sizeof(char)));
-	if (len >= ft_strlen(s) - start)
-		return (ft_strdup(s + start));
-	sub = (char *) malloc((len + 1) * sizeof(char));
-	if (!sub)
+	if (!lst)
 		return (0);
 	i = 0;
-	while (i < len)
+	current_node = lst;
+	while (current_node)
 	{
-		sub[i] = s[start + i];
 		i++;
+		current_node = current_node->next;
 	}
-	sub[i] = 0;
-	return (sub);
+	return (i);
 }

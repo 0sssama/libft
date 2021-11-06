@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:40:17 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/06 11:43:35 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/06 14:46:53 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 # include <stdio.h> // remove this
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct s_list {
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 /* PART 1 FUNCS */
 int		ft_isalpha(int c);
@@ -51,6 +56,8 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 /* BONUS FUNCS */
 
 #endif

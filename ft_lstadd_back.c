@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:40:02 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/06 20:45:36 by olabrahm         ###   ########.fr       */
+/*   Created: 2021/11/06 17:27:04 by  olabrahm         #+#    #+#             */
+/*   Updated: 2021/11/06 21:38:46 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "_bonus.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	char	to_find;
-	int		i;
+	t_list	*last_node;
 
-	i = 0;
-	to_find = (char) c;
-	while (s[i])
-	{
-		if (s[i] == to_find)
-			return ((char *)(s + i));
-		i++;
-	}
-	if (s[i] == to_find)
-		return ((char *)(s + i));
-	return (0);
+	last_node = ft_lstlast(*lst);
+	if (*lst)
+		last_node->next = new;
+	else
+		ft_lstadd_front(lst, new);
 }

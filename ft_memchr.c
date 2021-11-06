@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:25:36 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/05 12:00:36 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/06 19:43:38 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		return (0);
 	to_find = (unsigned char) c;
 	casted_s = (unsigned char *) s;
-	while (i < n && casted_s[i])
+	while (i < n)
 	{
 		if (casted_s[i] == to_find)
 			return ((void *) &casted_s[i]);
