@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 13:21:58 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/04 15:21:22 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/05 12:02:06 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*s_xd;
+	char	*casted_s;
+	char	to_find;
 	int		i;
 
-	s_xd = (char *) s;
-	i = ft_strlen(s_xd);
+	casted_s = (char *) s;
+	to_find = (char) c;
+	i = ft_strlen(casted_s);
 	while (i >= 0)
 	{
-		if (s_xd[i] == c)
-			return (&s_xd[i]);
+		if (casted_s[i] == to_find)
+			return (&casted_s[i]);
 		i--;
 	}
 	return (0);

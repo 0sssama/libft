@@ -18,21 +18,21 @@
 [x] ft_strchr
 [x] ft_strrchr
 [x] ft_strncmp
-[ ] ft_memchr
-[ ] ft_memcmp
-[ ] ft_strnstr
-[ ] ft_atoi
-[ ] ft_calloc
+[x] ft_memchr <== 1 test wrong
+[x] ft_memcmp
+[x] ft_strnstr
+[x] ft_atoi
+[x] ft_calloc
 [x] ft_strdup
 
 * Part 2
-[ ] ft_substr
-[ ] ft_strjoin
-[ ] ft_strtrim
-[ ] ft_split
-[ ] ft_itoa
-[ ] ft_strmapi
-[ ] ft_striteri
+[x] ft_substr
+[x] ft_strjoin
+[x] ft_strtrim
+[x] ft_split
+[x] ft_itoa
+[x] ft_strmapi
+[x] ft_striteri
 [x] ft_putchar_fd
 [x] ft_putstr_fd
 [ ] ft_putendl_fd

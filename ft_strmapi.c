@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:40:02 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/05 12:01:30 by olabrahm         ###   ########.fr       */
+/*   Created: 2021/11/06 10:36:51 by olabrahm          #+#    #+#             */
+/*   Updated: 2021/11/06 10:41:24 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	to_find;
-	int		i;
+	size_t	i;
+	char	*output;
 
+	if (!s)
+		return (0);
+	output = (char *) malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!output)
+		return (0);
 	i = 0;
-	to_find = (char) c;
 	while (s[i])
 	{
-		if (s[i] == to_find)
-			return ((char *)(s + i));
+		output[i] = (*f)(i, s[i]);
 		i++;
 	}
-	if (s[i] == to_find)
-		return ((char *)(s + i));
-	return (0);
+	output[i] = 0;
+	return (output);
 }

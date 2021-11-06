@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:40:02 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/05 12:01:30 by olabrahm         ###   ########.fr       */
+/*   Created: 2021/11/05 12:02:46 by olabrahm          #+#    #+#             */
+/*   Updated: 2021/11/06 12:20:49 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	to_find;
-	int		i;
+	char	*sub;
+	size_t	i;
 
+	if (!s)
+		return (0);
 	i = 0;
-	to_find = (char) c;
-	while (s[i])
+	sub = (char *) malloc((len + 1) * sizeof(char));
+	if (!sub)
+		return (0);
+	if (start >= ft_strlen(s))
 	{
-		if (s[i] == to_find)
-			return ((char *)(s + i));
+		ft_bzero(sub, len + 1);
+		return (sub);
+	}
+	while (i < len)
+	{
+		sub[i] = s[start + i];
 		i++;
 	}
-	if (s[i] == to_find)
-		return ((char *)(s + i));
-	return (0);
+	sub[i] = 0;
+	return (sub);
 }

@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:40:02 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/05 12:01:30 by olabrahm         ###   ########.fr       */
+/*   Created: 2021/11/05 09:30:21 by olabrahm          #+#    #+#             */
+/*   Updated: 2021/11/05 09:44:22 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_isspace(char c)
 {
-	char	to_find;
-	int		i;
+	return (c == '\t' || c == '\n' || c == '\v'
+		|| c == '\f' || c == '\r' || c == ' ');
+}
+
+int	ft_atoi(const char *str)
+{
+	size_t	i;
+	int		output;
+	int		negative;
 
 	i = 0;
-	to_find = (char) c;
-	while (s[i])
+	output = 0;
+	negative = 1;
+	while (str[i] && ft_isspace(str[i]))
+		i++;
+	if (str[i] == '+')
+		i++;
+	else if (str[i] == '-')
 	{
-		if (s[i] == to_find)
-			return ((char *)(s + i));
+		negative *= -1;
 		i++;
 	}
-	if (s[i] == to_find)
-		return ((char *)(s + i));
-	return (0);
+	while (str[i] && ft_isdigit(str[i]))
+		output = (output * 10) + (str[i++] - 48);
+	return (output * negative);
 }

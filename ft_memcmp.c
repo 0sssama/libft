@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:40:02 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/05 12:01:30 by olabrahm         ###   ########.fr       */
+/*   Created: 2021/11/05 08:38:46 by olabrahm          #+#    #+#             */
+/*   Updated: 2021/11/05 13:50:33 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	to_find;
-	int		i;
+	unsigned char	*casted_s1;
+	unsigned char	*casted_s2;
+	size_t			i;
 
+	if (n == 0)
+		return (0);
+	casted_s1 = (unsigned char *) s1;
+	casted_s2 = (unsigned char *) s2;
 	i = 0;
-	to_find = (char) c;
-	while (s[i])
-	{
-		if (s[i] == to_find)
-			return ((char *)(s + i));
+	while (casted_s1[i] == casted_s2[i]
+		&& i < n - 1)
 		i++;
-	}
-	if (s[i] == to_find)
-		return ((char *)(s + i));
-	return (0);
+	return (casted_s1[i] - casted_s2[i]);
 }

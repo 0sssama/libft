@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:40:02 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/05 12:01:30 by olabrahm         ###   ########.fr       */
+/*   Created: 2021/11/06 10:43:25 by olabrahm          #+#    #+#             */
+/*   Updated: 2021/11/06 13:56:50 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	char	to_find;
-	int		i;
+	size_t	i;
 
 	i = 0;
-	to_find = (char) c;
+	if (!s)
+		return ;
 	while (s[i])
 	{
-		if (s[i] == to_find)
-			return ((char *)(s + i));
+		(*f)(i, &s[i]);
 		i++;
 	}
-	if (s[i] == to_find)
-		return ((char *)(s + i));
-	return (0);
 }

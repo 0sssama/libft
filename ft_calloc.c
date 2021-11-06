@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:40:02 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/05 12:01:30 by olabrahm         ###   ########.fr       */
+/*   Created: 2021/11/05 09:44:45 by olabrahm          #+#    #+#             */
+/*   Updated: 2021/11/05 10:52:34 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	to_find;
-	int		i;
+	void	*allocated_ptr;
 
-	i = 0;
-	to_find = (char) c;
-	while (s[i])
-	{
-		if (s[i] == to_find)
-			return ((char *)(s + i));
-		i++;
-	}
-	if (s[i] == to_find)
-		return ((char *)(s + i));
-	return (0);
+	allocated_ptr = malloc(nmemb * size);
+	if (!allocated_ptr)
+		return (0);
+	ft_bzero(allocated_ptr, nmemb * size);
+	return (allocated_ptr);
 }
