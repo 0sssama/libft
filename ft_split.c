@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 14:41:26 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/06 12:07:24 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/07 20:21:15 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,53 +109,3 @@ char	**ft_split(char const *s, char c)
 	output[word_count] = 0;
 	return (output);
 }
-
-/*
-
-char	*ft_strndup(char *str, size_t len)
-{
-	size_t	i;
-	char	*output;
-
-	i = 0;
-	output = (char *) malloc((len + 1) * sizeof(char));
-	if (!output)
-		return (0);
-	while (i < len)
-	{
-		output[i] = str[i];
-		i++;
-	}
-	output[i] = 0;
-	return (output);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char	**output;
-	size_t	i;
-	size_t	j;
-	size_t	k;
-
-	i = 0;
-	j = 0;
-	output = (char **) malloc((ft_word_count(s, c) + 1) * sizeof(char *));
-	if (!output)
-		return (0);
-	while (j < ft_word_count(s, c))
-	{
-		if (s[i] == c)
-		{
-			i++;
-			continue ;
-		}
-		k = 0;
-		while (s[i + k] != c)
-			k++;
-		output[j++] = ft_strndup((char *)(s + i), k);
-		i += k;
-	}
-	output[j] = 0;
-	return (output);
-}
-*/
