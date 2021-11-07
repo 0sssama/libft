@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 10:36:51 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/06 10:41:24 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/07 07:39:47 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*output;
 
-	if (!s)
+	if (!s || !f)
 		return (0);
 	output = (char *) malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!output)

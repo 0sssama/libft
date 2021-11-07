@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 06:37:34 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/07 07:08:42 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/07 07:49:06 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*elem;
 
 	new_lst = NULL;
-	while (lst)
+	while (lst && f)
 	{
 		elem = ft_lstnew((*f)(lst->content));
 		if (!elem)

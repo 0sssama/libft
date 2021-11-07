@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 10:43:25 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/06 13:56:50 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/07 07:42:40 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	i;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return ;
 	while (s[i])
 	{
