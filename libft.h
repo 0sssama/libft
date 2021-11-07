@@ -6,14 +6,13 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:40:17 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/07 07:53:18 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/07 20:29:35 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h> // remove this
 # include <unistd.h>
 # include <stdlib.h>
 
