@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 21:41:31 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/06 21:53:05 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/07 06:33:17 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*current_node;
+	t_list	*temp;
 
-
-	current_node = ft_lstlast(*lst);
-	while (current_node)
+	while (*lst)
 	{
-		(*del)((void *)current_node);
-		current_node = ft_lstlast(*lst);
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = temp;
 	}
 }

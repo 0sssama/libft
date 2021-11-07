@@ -8,15 +8,13 @@ MANDATORY =	ft_isalpha ft_isdigit ft_isalnum ft_isascii \
 			ft_strtrim ft_split ft_itoa ft_strmapi ft_striteri \
 			ft_putchar_fd ft_putstr_fd ft_putendl_fd ft_putnbr_fd
 BONUS=		ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back \
-			ft_lstdelone ft_lstclear
-BNS_SRCS =$(BONUS:=.c)
-BNS_OBJS =$(BONUS:=.o)
-SRCS=$(MANDATORY:=.c)
+			ft_lstdelone ft_lstclear ft_lstiter ft_lstmap
 OBJS=$(MANDATORY:=.o)
+BNS_OBJS =$(BONUS:=.o)
 NAME=libft.a
 AR= ar rcs
 
-.PHONY: all clean fclean
+.PHONY: all clean fclean re bonus
 
 all: $(NAME)
 
@@ -37,7 +35,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-
-target: dependancy
-	action
