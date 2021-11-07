@@ -28,8 +28,7 @@ bonus: all $(BNS_OBJS)
 	$(CC) $(FLAGS) -c $? -o $@
 
 clean:
-	rm -f $(OBJS)
-	rm -f $(BNS_OBJS)
+	rm -f $(OBJS) $(BNS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
