@@ -6,7 +6,7 @@
 #    By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/08 13:16:18 by olabrahm          #+#    #+#              #
-#    Updated: 2021/11/08 13:37:14 by olabrahm         ###   ########.fr        #
+#    Updated: 2021/11/08 17:12:00 by olabrahm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ BONUS=		ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast ft_lstadd_back \
 OBJS=$(MANDATORY:=.o)
 BNS_OBJS =$(BONUS:=.o)
 NAME=libft.a
-AR= ar rcs
+AR= ar rc
 
 .PHONY: all clean fclean re bonus
 
