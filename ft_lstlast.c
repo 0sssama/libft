@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/07 06:37:34 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/07 07:49:06 by olabrahm         ###   ########.fr       */
+/*   Created: 2021/11/06 16:02:24 by olabrahm          #+#    #+#             */
+/*   Updated: 2021/11/08 13:36:18 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_bonus.h"
+#include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*new_lst;
-	t_list	*elem;
+	t_list	*current_node;
 
-	new_lst = NULL;
-	while (lst && f)
-	{
-		elem = ft_lstnew((*f)(lst->content));
-		if (!elem)
-		{
-			ft_lstclear(&new_lst, del);
-			return (NULL);
-		}
-		ft_lstadd_back(&new_lst, elem);
-		lst = lst->next;
-	}
-	return (new_lst);
+	if (!lst)
+		return (0);
+	current_node = lst;
+	while (current_node->next)
+		current_node = current_node->next;
+	return (current_node);
 }

@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 14:00:28 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/08 12:42:09 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/08 13:45:37 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(uns_n % 10, fd);
 	}
 }
-

@@ -6,13 +6,13 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:06:00 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/04 14:39:36 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/08 13:41:05 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_min(size_t a, size_t b)
+static size_t	ft_min(size_t a, size_t b)
 {
 	if (a < b)
 		return (a);

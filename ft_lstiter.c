@@ -6,11 +6,11 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 06:23:02 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/07 07:48:37 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/08 13:36:15 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "_bonus.h"
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
