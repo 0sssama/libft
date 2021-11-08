@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 08:38:46 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/05 13:50:33 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/08 13:29:26 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	casted_s2 = (unsigned char *) s2;
 	i = 0;
 	while (casted_s1[i] == casted_s2[i]
-		&& i < n - 1)
+		&& i < n)
 		i++;
+	if (i == n)
+		return (0);
 	return (casted_s1[i] - casted_s2[i]);
 }
