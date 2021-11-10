@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 14:41:26 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/07 20:21:15 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/09 14:16:34 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ static void	ft_free_all(char **array, size_t len)
 	i = 0;
 	while (i < len)
 		free(array[i++]);
+	free(array);
 }
 
 char	**ft_split(char const *s, char c)

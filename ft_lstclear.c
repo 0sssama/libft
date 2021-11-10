@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 21:41:31 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/08 13:36:10 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/09 14:10:02 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*temp;
 
+	if (!lst)
+		return ;
 	while (*lst && del)
 	{
 		temp = (*lst)->next;

@@ -6,7 +6,7 @@
 /*   By: olabrahm <olabrahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 15:27:04 by olabrahm          #+#    #+#             */
-/*   Updated: 2021/11/08 13:36:08 by olabrahm         ###   ########.fr       */
+/*   Updated: 2021/11/09 14:09:51 by olabrahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!lst || !new)
+		return ;
 	if (*lst)
 	{
 		new->next = *lst;
